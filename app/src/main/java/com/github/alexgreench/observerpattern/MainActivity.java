@@ -19,21 +19,13 @@ public class MainActivity extends AppCompatActivity implements RepositoryObserve
 
         textSubscriber = findViewById(R.id.text_subscriber);
 
-        findViewById(R.id.btn_subscribe).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dataRepository.doSubscribe(MainActivity.this);
-            }
-        });
+        findViewById(R.id.btn_subscribe).setOnClickListener(v ->
+                dataRepository.doSubscribe(MainActivity.this));
 
-        findViewById(R.id.btn_unsubscribe).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dataRepository.doUnsubscribe(MainActivity.this);
-                textSubscriber.setText(R.string.you_are_unsubscribed);
-            }
+        findViewById(R.id.btn_unsubscribe).setOnClickListener(v -> {
+            dataRepository.doUnsubscribe(MainActivity.this);
+            textSubscriber.setText(R.string.you_are_unsubscribed);
         });
-
     }
 
     @Override
