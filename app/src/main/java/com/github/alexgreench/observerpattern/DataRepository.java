@@ -19,7 +19,7 @@ public class DataRepository implements Subject{
 
     private static DataRepository INSTANCE = null;
 
-    public static DataRepository getInstance() {
+    static DataRepository getInstance() {
         if(INSTANCE == null) {
             INSTANCE = new DataRepository();
         }
