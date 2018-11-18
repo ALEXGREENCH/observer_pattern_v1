@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">observer pattern v1</string>
+    <string name="you_are_unsubscribed">you are unsubscribed</string>
+    <string name="subscribe">subscribe</string>
+    <string name="unsubscribe">unsubscribe</string>
+</resources>
